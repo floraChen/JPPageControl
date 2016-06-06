@@ -84,7 +84,9 @@
         {
             UIImageView* dot = [dotViews objectAtIndex:i];
             // Set image
-            dot.image = (i == self.currentPage) ? mImageCurrent : mImageNormal;
+            UIImage *image = (i == self.currentPage) ? mImageCurrent : mImageNormal;
+            [dot setBackgroundColor:[UIColor colorWithPatternImage:image]];
+            //dot.image = (i == self.currentPage) ? mImageCurrent : mImageNormal;
         }
     }
 }
